@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&amp;display=swap" rel="stylesheet">
+    <title>Boba Bubbles</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div id="overlay">
+        <h1>Boba Bubbles</h1>
+        <p>The Website For All Boba Lovers</p>
+    </div>
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhIQEhIVFRAQEBAQFQ8VEBIQFRUVFRUWFhUVFhUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLi0BCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLSstLS0tLS0rLS0tLS0tLS0tLS0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABEEAABBAAEBAIHBQYEBAcBAAABAAIDEQQFEiEGMUFRE3EHIjJhgZGhQlKxwdEjYnKSsuEUU4KiFjNDwiRjc6PS8PEV/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAKREAAgIBBAEDBAIDAAAAAAAAAAECEQMEEiExQRMiMhRRocEFI2Fxgf/aAAwDAQACEQMRAD8AhwY00N+iusmxzSSDV9Fj45Nhv0TsbxYs7LM5GtQNdnONbVfaVSMYmpHt09KrsqwzKFNg8aLc4v3pJxBVWJCe6Bno0jew2IucPreQ1oslXUUk2GbbmBzPc7l9FXcO+q4PPIhXWc4tvhuA3JFVRU2yKSKXMM1Mp5UO12qDG7lTsNh3PuqodSVExsRaaKIy5ohrgitanmNSWhOtVmVImOaq0BWuMCrKUEljgmFStx1UbAkq7w2GaRZS5SoZGNkATHulDFd1JmwYB2UaTBFV3Inax1mJatpluLjMYoigNxYCxEeXnulOy5yLRNMsMymYZHFvJQzKOyXBlLyNrTL8udfM/JRwAUkoQicSaAtOx4A9fwVpl+FaOeyhklU+QjYivgo0luK0+KwjXUEy3LgOiI9kPooxGQN1r+HpmeGAKBHPkFQ4yKlVzMWv0k1ZlWWSZP4oxkfi+rRPUhQYZdrpVOJjN/FafKcEHM+Cz5IqJohK0VkmZsbzTYzlnf6qwx/DodazWO4TeN2k/BTFRYScvBJz3FNdGaPRc602T5rRZjg5om042FRR81swRSRkzStihAgp7aQWraZ7NpJhdm0K2CbOGKdZitgT2CcZix1XFtnY2jIw7uW/laeiwRK1mDbE7Q2m6XaRdA8+trorcjwoj8IQs0VzoavPVztWxwlkFZMig+jjcGE0hNzwDUPNXU2FaZnxA+q17m6u4BKh5rhWsFtsFvvu0rlOhlpqy4yuIBo8kvMI7CPJjbAfcpGNZstMfiKfZQYchoIPLvSrMzfqO3IK7EFqozXDlu6pH5Ev4le0Jxqjh5Sg8p7QoGL5KsIU6dxUEkqrJLbLK2tarCQucKYNvJYjDTG1cZRxOyAlsjqDuTidkueNvkvHIrplhj4Hxn1xz6qGMSFKzHO48RTI3B3WxuPmq/EwEUUvbXYxST6NDhMve5uoD8FDnxWg6XCiFNyjPY9IY404Cqon8lQ8TEufrA2TIYWxc8qiaXL8YHN26JjGTgEkhVnD2K2olT8wwjpBsU96dbeBH1DsS3FNKs8PA0gHus9Fkz2m7O4VpE6RjQ3t3CWsLss86HJpdJI7KJNmzW7Wm8VG91nfdZvHwu1Dc802OBeSjz30aN0usWFBkYpmVRfs90p8YTXwii5ZQ4pm481q8tmaGCqqlnsyYq1+MLRVmu1lZ9u6Ro3bYnUspy1j2B7jerdUHE9YZw6tddfBVGQcdGJnhuaXAbAggH6qDn+dnFvBqmtuh7ytssWLZRkWTIpWUfFGZhzTt0WFD97Wn4hiAB36LKpcYqKpFpS3csmtnRptkWwQTLZWkb6KO2jyCRI0BORv9QeSjPcHdVy4qzrydIW3GPAoPcB2sq5j44xgj8Hxjp06eQ1V21VayGLk0nYpiPEbp8YNdMzylGXaN5kj3u9a9+dqPxJjHAhpoCxfvUjhaW2hU3HGq9u4WWPzoZP42jbcPYkGMV2VjiZLCx3CMp0i+wWmc5PXAhiYngKvzudpFKfHHdqkzrDkHrSqqsJSoqGtS2hICUE5lRE7VCLFPlURwVWXQpkFNLj1WWzV9yBnbdX+YYstbSzuWNMspce6vATk7NZkEekA+5W81kKPg4Q1oU7xgAlZWNwrgqGTFjlLnxXiUFDxBtylQNoikxSaQuUU2WWWYbTWyvY5tIVHhsUdQbRvlyWniyuRzNVt8t1ON5JdEzjCPZFdjQN00MxjJq1X5rixHqY6rHRZhuMBk5oWSV0yHijVo6C1zXBQcZlrXEGk1gpKaPJPnEo9Ur6aERxhopMyUg+W+SjSOTHLgokQsz3UaHKg8blLxwJ5c1GnjxMTdZaQ3qeyXH5Dp/AlR8OMFm1VZoWxcknFcQOa2lnnyvxDrPs3yT7oy02Qs5x5ft0VQrnOMKGNVKFFl6LnDt9UeSCLDv8AVHkgmWRRr9P7MeSo8TM4O2K0c7aib5LNzPFkrmQb7O1FR6ZCnlJO6dw8dpE+6fwELjyFrQp0uReaEbSR0XhYMZE3kbHP3qj4xnaX6R0Kqm42SEUHED8FFjeZnWd1l203IbgjGU1FmkyHGBoCv2Zow9Vk8PhiNkjGQuAsGimYZKaLfyenWGarydIypzXcijz7CAsPkud5DxM6FwbJyvmtdiuI2SM2PMLmaiOWOdV0cy0zM0r/ACjhWedokFMYRYc67cO4A3r3+5UeHnDXtc5upocHFp6gHkukZNnPjRCQNaGh2gsIO1eR7UuymkrkVd+DNs4MlL6e9ojF29tuPLlRpNYjhJoeKmuIj2qBOocxsar3jvyW0nxwDLBbXLawPxUSOVrgPVbTboWdvqlZJK6i+S8N1W0c4z/g/GHeDRJHY6aHjlZIJpzRXbryVVFwrjYoxIyH1qLnO9sWDu3SB26Dffn0XZGhtUWj5lV+Y4nQKDGkOcLGs/PknY26VtCp9nNIM8ljc4SYV74mtsyxsI08/aDjQ5ctWw6ps5wXDxfCcYi8s1RftdHOg9oN3Q5jbta1keOA8RvhAgXY8Y11FUWnauigZBBgB4wETWmVro3RjEn1xuarTyV3jj2yFka4RmIc1GoGQaGOAcHmwKPKwRt5/wD6tfw66OQ7G+XrAEgDuT0918+izmXQ4QylseEedJNtOIkcwHlu0tq9hutNh8fHhg6TwhGGsbqeDbqvZgsbiz8VEoRZKkzU4vDxsAqhpF3t07qfl2ZMfGOd17lyvOOJ/HJZDqEdN9V1A2BvsCdrS8u4ifhwA4WFV5ZR+BZY13MsOPICS6Tl0+SxGXSHxN/ctDm+eeOCOh6LNv8AVdYVYbnbl2aJThs2o6ZlseprfwUDiLEeE0EFU2X55oA9wVfneYeMQN9yo924zUtvBo8txWptp98iqspNMScdmGhMYJFtg6M0V8vEb+K03FOhmDnd2id+CwGW5oC9juzgVouIcxEmGkZe7m0qRkrLzi9pzIsdK7f2eyusLhwwBHDhdPROUiUykcZnuInWs+Ar/P8A81RxpsOhcuyTG/YIJARK5Fm8zfEVE3yWPnxW62+MwRfE3yWIzPAua5ZcW1xo6GSc4PcjeeinIo8W+SSQB3hua0NO45XdLtMHDEAAqNo/0hcu9BDNPjg/5jT/ALV3BiIwUpOzNkyylyUUnDGHINxMP+kLm3HOQQ4QtmjaG63aSAKB2u6+C7QQuTem+TTBGR/nN/pcoy4Y1SL4M8oT3HOcTmo1UOicix+obrKxAuOoLtHoo4difAJ3tDnvc7ci6AJFC/JRGCxKkP1OsnqHcvBzw4ESuAHVXTMo8NvuC7g3IYR/02/yhMZhkcTmEFgojsFaSl2ZVKJxLStpwLvDMztI0/zNr/tWYzjCiKaSMcmuoeXNXfA+OZGZw9wALWOFmrouuvmFZV5B34LbFZa8NdRvfUG/NHlcTmg6huenUeauXTMIsOBFXYIO3dQ4yy3uDgdwDvsCAs60uOElJDfWlKNMXaZnhJII+Kchna40Dewd8CpBCdCn0Ul/k5pJw9jP/wCg94sYdxsv1Ci0jlp53abwfBE8WIjk1MdEx+ous6uu1fHurTjz/HtmhfhdZjA3YwWC+/tjqKWtywvdCx0rdMhY0vaN6dtY+abKTSFRSbIsOAa2/e4uJNnmsL6To3MbI4E6DFCz3avFB+dNK6YfpS5r6YcU3wIYw4W+YPoEWWtY7eu1uCrF+4tJcGR4S9Zwv7wC1+f5X+zJb2WH4Oc4zNY0Ekuby7dSuvZxh/2DrFUw/wBkuSayF4tPHRzDDxnqVHxjTq27qTK14cTSXgoyXix1CfZTb7Tb8M+jd87GyTSFoIB0NHQ9yVr4fRxh2itAPvN387WuyBo8Jv8ACFaFKUHNW2V3bXSRx3iPhsYSnN/5btq7FYvOYLBXXfSWaw9/+Yz8VyjFmwiPVFmypymKirgyEkAna1DwkdFSC2yqeRiftJeKjGkkc1XOB7Kyij1UDyV9hstYW71yTIQT7EzyNdHK8/f0PdUca13HGGaw7d1kGJ9JdCrb7H7Rpu0EAddwTh4Tb7LK581urbqpWGxx0AAqsx7yXLP9PGLtM1/UylGmi74Fz8YKU6vYkqz2IXZsFxrhnNB8RvLuFwMM5GloMrkYG0QlyuPMQpS7OyO4vw9f8xt+YXPPSM84xgANNadXK7NV+arvGj6BJzLNm+HRabrmCtOl2Sl/aZ9Spxj/AFGIybK3vcWCvVNWu8+jPBOiwzWOqwX8ve4lcm4RcTI5xHqk7dV27g+vCHmfxWrPgxqClH7mXDmySm4yro0QTWJ5HyTybmGxWaS4NK7OIcXNrFzeY/pCY4aiD8TGx107W3avuOUzjgVi5PfpP0UHhqSsVB/6gHzBH5pMUnSY98co0eb8NxRR+KzU7SYWFhA3aZGtcdutEn4KHhchh1zAA0Ktt7bgEbLX5wP2MvujefkL/JUGFxTdAkG/iEOv3ENA3WbU4YQlwuKH4c05R5fkqsLkWgvLJHjbanuFda2KdyvBO8R+qSQjSAP2jwCTd9fcm8TjZC5+n1WaHDetyCQfjsk5X4sheC7TTr778+falzYz9y7NrUtrbJE+HdG/eaTR7RBleaABPfkq/IOJmY2Z8Ya9hDTpJkO7bq6+yeStszia8xXuN2uHdrhTvxUJvC8OEa5+HBbK5rmh+tzvV5ir5LVjcdk2/DRmmpOUUvJJy7BgxOBcSXyi7cXEtDuRPUFYji/hmfEz+LCy49AaDYG+t7j/AFLX5ZUMenVcjz1N1Wrf5qVgc+w7I2se6ntG40nz7LX/ABcY5MvufS/Zl/lJzxYrgr5/RkeBOG5sPLqkjq/tWNvdzXQ83YXx6A2+XZV54kw33/8Aa79EX/E+G+//ALXfou3LS4n5/KONDWZ13D8MqJ+HXuHsb+YUM8PvjOogfNaB/FOH+/f+l36KBjeIY3im2T5Uky0mGK+X5RphrM02ls/DOi8PZswxt3HIK1dmTO65Nl2SYuUamOMbTv7RH0CsWcLYzriXfMrmb9vCZ0Nl8lh6SMzYYPDBGpz20PI2uaEq+4kyOaKnPeXg7WTZVKzClNxyjtKSg7G2Kyw8Aq1GbhlYQjZLm7fA2KqPI2TSU7GvARuYm3jZEW0Q4pmH4snLiL7rOtV9xV7Q81RNWmLtGaSpikSCCkqdBjyx7WC2OB97SkHBXuQu0nDMP2Qmn5ZEfsD5BUcGOU0cew2Xuke2NvNxW1wnAJLb8Uh3kKWmZkcIcHhoDh1oK6gmDRVJcsc74Lb4nOsTwNM3cSj4tP6rI5zgp4zodv7wu5zyBwqll804eMpu/oq1kRNwfZzfhyZ8J9ZhPkukcOcYxRepISwdyNvmoA4We3sfgnWcN37Y28k2WpyuGyURUdNiU96Zu4OLMG4WJ4/52pvFcT4ejUrP5gsZJwXA4e0AfeFVz8EtZZa4FZ3lm1THLFH7lbxJjWzzvlb7JoA966qFlb9E8L/uyxn4BwtP4vAOaaLTt7ioZiIN9t/krwdEyR1jMI9UcjfvMe35ghc0w+bNGHja0jxWyB+j90NBsjsun8699H5rk+b4VscQ01r8SZpd10tJZXzVf5BcR/7+i+h7a/1+w8fmBLHNG2t+3cauf1V7l8/hksa2y0t1G6Fae/elz2TFObovuD8ldQZv4jpDuGudde/SBv8AIrmSxSgk0dHiXtNbisYGlrrHhglpPvsbhO5pnDHQh8Z1V6vxKz0k7XNY01pDJZiO5Di0BJweIDhGzYAzURsBQitUUnTX3D0lw/sFrLHVuaEZd5kf3+io8W0mR5/ed+KvsHIJDiZPsggD+Uj9FXyR7k9yStmjW2zPq+aIWGwpcQO5AWh/4fAbfUC1Gy5gBHmtJ49tr3LXuk3VmXakjKPy+lLyvAgvbf3grCeJDA+q4HsQVLbJtVwdYyiBoYNuimujHZUuUZo0tG/RT349tc1RNJCmm2ZH0gEaGNH3r+QKwjlruM8UHuaB0srIzlQhvgIFOh1KPEU+BYR5LPoJr7QlGx8ky6wUZfYKmiqZhOKfaHmVRtCueJz64+Kp2Ba49GSfyBSCMg9kFJQ9UgowUgJQV6CxQKNJCUigDtGCiRooA0pJSkUAdItA7IwjRQDbsOw82hMSZXC7mwfJS0RKKRNmKzLjE4eWWF0IcIXBoc1+kkb1sQe3dYPOMYZPXFgSPmkDLvSHyaq+qn+kEVipx1cRXxAd/wBypmYhsckbTu3QCAexG4+YK5+qcmq7o6ulhBc/dEjN8qc0Nr7LI3Vy9t2lV2DdpL/d+ivsdjXTB+1AMjA8myAj8VnS06i0c9R+qx425R2s17adloMTQcejYi2v4tykMGiKKQuvW55rtpGlUb8QRqapsOKL2NZ0Y2Tf5JjwNKynqpui0ySYlkjRzkfE2u9uVtNhnDm0jzBCreB49WLgb0/xLXfyBzvyC7aYmnm0H4LZiw8NmDUZqlRySAbqeJqXRn5ZCecbfkFGk4fw5+xXlsmrCZ3mvwYxsDiL/JNwx+tv0W4dkcdUCQqvEcKWbbLXmFMsXHBWOTnkgxThoG6EmYnv9U8/hqYcntP0UObh7Ej7IPk5UeJ0XWRFbjptRtVGKerybKJxzid+Kr58A8c2OH+kqNlFt6ZBhcpLZNky6Ov/ALSdYAqKJdyEE2U3iBQKfdI1qr8bjLCsolbMVxE63/NIySIOO6RnTreo2ExBZyT0uDM3yX82FbZ5I1Tux7igiidyPTgRhABGAnCg0aKkaAsMI0SNBNikESNQAaO0lBACiUklBJcgDlXpJi/8U795sbv9tfkszicvkfC3ENHqweoXWB7x+P1Ws9KWHc2eKWvUfGGav3mk2Pk4Khwrh/gsUL31wUL95/RY86aaZ0tO1KAxlU5k1tv/AKJr4OaU/lWHt07zuWXXmqnLsR4cm3WMtVthZjHFMfvl4/p/uudmhtbS80dGDtGdxO5v7xP4qwzPDiDTEPb0Bzz73Bpr4WoTBuP4k7m05fK5x5kha6tqPgzvhNmo9GUOrGsPSNsr/iWlv5ldjaVyv0T4Z3jSy16jYwzV+84ih8gV1APW3Hwjl53cx4FGmhIj8RMEjiCSHhHaCBVo0m0FIC7RFo7D5JKMIAQ7DRnmxp+AUabJMM/2oWfygKcEYQRZnsTwVg3/AGHN/he4KrxPo3gPszSN89LvyW2CFKNqLbmcizT0Ove7VHim+Toj+IcqLE+iPHt9gwv8nub9CF3ukNKKRU88H0ZZl/kD4Ss/VGvQ+lGpoLK0I0QRhWIAglIlAApGEEaAAjQCCCQII0EAJKQ5OUkvoc0AYP0qMuCE9pXD5tv8lzXCsJ1MBIBra9tiuw8Z4bx8LJG1mp3qub0Ng/Z99WuNTPfDJuCHDm1wLT8kvLBuPBp0+aMHyJxEBa/mb/unppn6C0vNaienUC1FkzO6Gg6he/mbUT/HXtW92s3pSdWjZ9RjXTJXgkkesdqrdI+1ufqkR4wg6tN7V/dNwanuoA2TyAs/IJig7FSzwo676KG1h5nd56+TB+q3AKzfBmE8LCRMDNJoucOpcTdnuapaBrSmoxydux5GE2GlLDSpoqKtKCSAlBSAsFLCbBSg5SQLCUEi0YKAYtGEQKMKSBQRgIglBQAKRgIWjtBIEEEEEFWEaq4c5afaaR5bqbFjY3cnDyO34qxBJCFIgjQAaMIkEAGjSbR2oANC026QBMumtADskwCivcTzRoipAbeFDxmBjkFPjY8dnMa78VNKKlNgZubhLBO54dg/h1M/pIUY8DYDn4H/ALs3/wAlq3MTZYqgZ1nB+Cbyw7D/ABW/+olWeDymNmzI2NHZrGtH0CsGxp+Jv0QSO4WKgn9KEPJOqCRqkYTiKkAJCFo6R0gLCCUEAjAQRYEoBFSUEAKCNEAlBABtSkSNBIAjtAIIAFoIWggg56xycRIKCw9HiHN5OI+KlRZvIOdO8x+iCCLCibFnLT7TSPLdS4cYx/I/QoIKyKtDhemnSWggrECEEEEABFaNBQAko0EEAEEZaggoAAanGDZBBBItppPgoIKCQ0LQQQDBaCCCCA0aCCADBSggggBQSgUEFICgjRoKAAicUaCAG9SCCCAP/9k=">
+    <div id='textbox'>
+        <p>Boba, also known as bubble tea, is a delicious drink that has captured the hearts of milions worldwide with its combination of creamy tea, sweet flavors, and most notably, tapioca pearls. Whether you're a fan of a classic milk tea or a fruity concoction, this customizable beverage offers a delightful experience with every sip. It's more than just a drink; it's a global treasure enjoyed by people of all ages.</p>
+    </div>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+            const globalRadius = 20;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight / 2;
+
+            let mouse = {x: undefined, y: undefined};
+            const colorArray = ['#361212', '#dce39e', '#ae90b8', '#c17e2c', '#eff4c3'];
+            window.addEventListener('mousemove', (event) => {
+                mouse.x = event.x;
+                mouse.y = event.y;
+            });
+            
+            function Circle(x, y, r, dx, dy) {
+                this.x = x;
+                this.y = y;
+                this.dx = dx;
+                this.dy = dy;
+                this.radius = r;
+                this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+
+                //circle initialization
+                this.draw = function() {
+                    context.beginPath();
+                    context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+                    context.fillStyle = this.color;
+                    context.stroke();
+                    context.fill();
+                }
+                
+                //indididual circle position change
+                this.update = function() {
+                    if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+                        this.dx = -this.dx;
+                    }
+                    if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+                        this.dy = -this.dy;
+                    }
+                    this.x += this.dx;
+                    this.y += this.dy;
+
+                    this.draw();
+
+                    //interactivity
+
+                    if (mouse.x - this.x < 70 && mouse.x - this.x > -70 && mouse.y - this.y < 70 && mouse.y - this.y > -70 && this.radius < 70) {
+                        this.radius += 1;
+                    }
+                    else if (this.radius > globalRadius) {
+                        this.radius -= 1;
+                    }
+                }
+            }
+            
+            //list of all instances of the cicles on screen
+            let circleArray = [];
+            for (let i = 0; i < 300; i++) {
+                const radius = globalRadius;
+                const x = Math.random() * (innerWidth - radius * 2) + radius;
+                const y = Math.random() * (innerHeight - radius * 2) + radius;
+                const dx = (Math.random() - 0.5) * 1.5;
+                const dy = (Math.random() - 0.5)* 1.5;
+                circleArray.push(new Circle(x, y, radius, dx, dy));
+            }
+
+
+            function animate() {
+                requestAnimationFrame(animate);
+                context.clearRect(0, 0, innerWidth, innerHeight);
+                
+                for (let i = 0; i < circleArray.length; i++) {
+                    circleArray[i].update();
+                }
+            }
+
+            animate();
+        });
+    </script>
+  </body>
+</html>
